@@ -735,22 +735,3 @@ const pricingPlans = [
     ]
   }
 ];
-
-const techFeatures = [
-  {
-    title: "Quantum Microchip Technology",
-    description: "Our proprietary microchips use quantum computing principles to process and transmit location data with unprecedented accuracy, enabling real-time 3D mapping of infrastructure."
-  },
-  {
-    title: "Neural Network Integration",
-    description: "Smart wires and pipes form a neural network that continuously learns and adapts, providing predictive maintenance alerts and optimizing resource distribution."
-  },
-  {
-    title: "Advanced VR Visualization",
-    description: "Military-grade VR technology renders infrastructure in real-time, allowing you to see through walls with millimeter precision and interact with holographic controls."
-  },
-  {
-    title: "Secure Quantum Communication",
-    description: "All data is encrypted using quantum cryptography, making the system completely secure against any current or future hacking attempts."
-  }
-];
