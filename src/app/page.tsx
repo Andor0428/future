@@ -1,11 +1,9 @@
 "use client";
 
-import { Section } from "@/components/ui/code.demo";
 import { NavWrapper } from "@/components/ui/nav-wrapper";
 import { motion } from "framer-motion";
 import { FC } from 'react';
 import { BackgroundBeamsDemo } from "@/components/ui/code.demo";
-import Image from 'next/image';
 
 const HomePage: FC = () => {
   return (
