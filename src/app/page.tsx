@@ -537,6 +537,50 @@ const HomePage: FC = () => {
         {/* Waitlist Section */}
         <BackgroundBeamsDemo />
 
+        {/* Technology Features Section */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/20 to-black" />
+          <div className="container relative mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-300">
+                Core Technology
+              </h2>
+              <p className="mt-4 text-purple-200/70 max-w-2xl mx-auto">
+                Breakthrough innovations powering the future of infrastructure
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {techFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 rounded-xl blur-xl transition-all duration-300 group-hover:blur-2xl" />
+                  <div className="relative p-8 rounded-xl border border-purple-500/20 bg-black/50 backdrop-blur-sm hover:border-purple-500/40 transition-all duration-200">
+                    <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300">
+                      {feature.title}
+                    </h3>
+                    <p className="text-purple-200/70">
+                      {feature.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/20 to-black" />
@@ -733,5 +777,20 @@ const pricingPlans = [
       'Early access to new tech',
       'Co-development options'
     ]
+  }
+];
+
+const techFeatures = [
+  {
+    title: 'Advanced VR Visualization',
+    description: 'See through walls in real-time with our advanced VR visualization technology and precise 3D mapping.'
+  },
+  {
+    title: 'AI-Powered Microchip Network',
+    description: 'AI-powered microchip network that provides real-time data, predictive maintenance, and instant alerts.'
+  },
+  {
+    title: 'Intuitive Holographic Interface',
+    description: 'Control and monitor your infrastructure through intuitive holographic displays and VR integration.'
   }
 ];
